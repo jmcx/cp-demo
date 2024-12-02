@@ -178,34 +178,35 @@ curl -u mds:mds -X POST "https://localhost:8091/security/1.0/rbac/principals" --
   -d "{\"clusters\":{\"kafka-cluster\":\"does_not_matter\"}}" \
   --cacert ${DIR}/security/snakeoil-ca-1.crt --tlsv1.2 | jq '.[]'
 
-# Do poststart_checks
-# poststart_checks
+# # Do poststart_checks
+# # poststart_checks
 
 
-cat << EOF
+# cat << EOF
 
-----------------------------------------------------------------------------------------------------
-DONE! From your browser:
+# ----------------------------------------------------------------------------------------------------
+DONE! 
+# From your browser:
 
-  Confluent Control Center (login superUser/superUser for full access):
-     $C3URL
+#   Confluent Control Center (login superUser/superUser for full access):
+#      $C3URL
 
-EOF
+# EOF
 
 # if [[ "$VIZ" == "true" ]]; then
 # cat << EOF
 #   Kibana
 #      $kibanaURL
 
-EOF
-fi
+# EOF
+# fi
 
-cat << EOF
-Want more? Learn how to replicate data from the on-prem cluster to Confluent Cloud:
+# cat << EOF
+# Want more? Learn how to replicate data from the on-prem cluster to Confluent Cloud:
 
-     https://docs.confluent.io/platform/current/tutorials/cp-demo/docs/hybrid-cloud.html
+#      https://docs.confluent.io/platform/current/tutorials/cp-demo/docs/hybrid-cloud.html
 
-Use Confluent Cloud promo code CPDEMO50 to receive \$50 free usage
-----------------------------------------------------------------------------------------------------
+# Use Confluent Cloud promo code CPDEMO50 to receive \$50 free usage
+# ----------------------------------------------------------------------------------------------------
 
 EOF
